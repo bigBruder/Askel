@@ -1,5 +1,7 @@
 import { FC } from "react";
-import { Logo } from "../Logo/Logo";
+import { SidebarLogo } from "../Logo/SidebarLogo";
+import { ListSideBar } from "../ListSideBar/ListSideBar";
+import { User } from "../User/User";
 import {
   ArrowBack,
   BoxInput,
@@ -8,12 +10,11 @@ import {
   IconSearch,
   Input,
 } from "./SideBar.styled";
-import { ListSideBar } from "../ListSideBar/ListSideBar";
 
 export const SideBar: FC = () => {
   return (
     <BoxSideBar>
-      <Logo />
+      <SidebarLogo />
       <BtnBack type="button">
         <ArrowBack />
         <span>Back</span>
@@ -23,6 +24,7 @@ export const SideBar: FC = () => {
         <IconSearch />
       </BoxInput>
       <ListSideBar />
+      <User />
     </BoxSideBar>
   );
 };

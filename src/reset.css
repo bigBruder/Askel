@@ -34,3 +34,7 @@ input {
   outline: none;
   border: none;
 }
+textarea {
+  font-family: "Lato", sans-serif;
+  resize: none;
+}

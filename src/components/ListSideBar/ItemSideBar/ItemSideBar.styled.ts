@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
+
 export const BoxTitle = styled.div`
   width: 220px;
   padding: 12px;
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 11px;
   border-radius: 4px;
   background-color: #1f1f28;
 `;
-
 export const Title = styled.h3`
   font-weight: 700;
   font-size: 12px;

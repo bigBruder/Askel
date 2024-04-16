@@ -13,23 +13,38 @@ export const ItemSideBar: FC<ItemProps> = ({ item }) => {
   const { isOpen, toggleIsOpen } = useIsOpen();
   return (
     <>
-      <BoxTitle>
-        <Title>{item.title}</Title>
-        <Arrow onClick={toggleIsOpen} $isOpen={isOpen} alt="arrow" src={arrow} />
-      </BoxTitle>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-          >
-            {item.description.map((el) => (
-              <Text key={nanoid()}>{el}</Text>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <li>
+        <BoxTitle>
+          <Title>{item.title}</Title>
+          <Arrow
+            onClick={toggleIsOpen}
+            $isOpen={isOpen}
+            alt="arrow"
+            src={arrow}
+          />
+        </BoxTitle>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.ul
+              initial={{ height: 0, opacity: 0, margin: "0" }}
+              animate={{ height: "auto", opacity: 1, margin: "8px 0" }}
+              exit={{ height: 0, opacity: 0, margin: "0" }}
+              style={{
+                padding: "0 16px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 16,
+              }}
+            >
+              {item.description.map((el) => (
+                <li key={nanoid()}>
+                  <Text>{el}</Text>
+                </li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </li>
     </>
   );
 };

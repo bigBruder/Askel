@@ -2,10 +2,12 @@ import { IoSearch } from "react-icons/io5";
 import { MdArrowBack } from "react-icons/md";
 import styled from "styled-components";
 
-export const BoxSideBar = styled.div`
+export const BoxSideBar = styled.aside`
   width: 250px;
   min-height: 100vh;
-  padding: 16px;
+  padding: 21px 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
 
   background: linear-gradient(
     180deg,
@@ -15,7 +17,7 @@ export const BoxSideBar = styled.div`
 `;
 
 export const BtnBack = styled.button`
-  margin-left: 14px;
+  margin-left: 22px;
   margin-bottom: 14px;
 
   display: flex;
@@ -39,6 +41,7 @@ export const BoxInput = styled.div`
 export const Input = styled.input`
   width: 202px;
   height: 28px;
+  margin-left: 8px;
   padding: 0 20px 0 8px;
 
   color: #fff;

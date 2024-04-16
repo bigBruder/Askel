@@ -4,7 +4,7 @@ import { Loader } from "../Loader/Loader";
 
 const RootLayout: FC = () => {
   return (
-    <div>
+    <>
       <Suspense
         fallback={
           <div
@@ -21,7 +21,7 @@ const RootLayout: FC = () => {
       >
         <Outlet />
       </Suspense>
-    </div>
+    </>
   );
 };
 
